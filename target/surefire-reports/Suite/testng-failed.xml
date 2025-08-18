@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="Selenium.TestComponents.Listernerss"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Error(failed)" verbose="0">
+    <classes>
+      <class name="Selenium.SeleniumAlltestngandPom.ErrorValidation">
+        <methods>
+          <include name="ProductValidation"/>
+          <include name="Launchapp"/>
+          <include name="Close"/>
+          <include name="LoginPgValidation"/>
+        </methods>
+      </class> <!-- Selenium.SeleniumAlltestngandPom.ErrorValidation -->
+    </classes>
+  </test> <!-- Error(failed) -->
+  <test thread-count="5" parallel="tests" name="Main project Test(failed)" verbose="0">
+    <classes>
+      <class name="Selenium.SeleniumAlltestngandPom.SimplePro2">
+        <methods>
+          <include name="SubmitOrder"/>
+          <include name="OrderHistory"/>
+          <include name="Launchapp"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- Selenium.SeleniumAlltestngandPom.SimplePro2 -->
+    </classes>
+  </test> <!-- Main project Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

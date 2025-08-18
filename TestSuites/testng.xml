@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite parallel="tests" name="Suite">
+<!-- parallel="tests" used to run the all tests parallely to save the execution time and instead running the tests sequence wise-->
+
+
+<listeners>
+	<listener class-name="Selenium.TestComponents.Listernerss"/>
+</listeners>
+
+
+<!--<groups>
+	<run>
+		<include name="ErrorsHandling"/>
+	</run>
+</groups> -->
+
+<!-- Although there are lot of test in this xml file but due the groups tag
+only run "ErrorsHandling" this method-->
+<!-- Check the class ErrorValidation & BaseTest-->
+
+
+  <test thread-count="5" name="Main project Test">
+    <classes>
+      <class name="Selenium.SeleniumAlltestngandPom.SimplePro2"/>
+    </classes>
+    </test>
+  
+  <test thread-count="5" name="Error">
+    <classes>
+      <class name="Selenium.SeleniumAlltestngandPom.ErrorValidation"/>
+    </classes>
+  </test> <!-- Test 1-->
+</suite> <!-- Suite -->	
