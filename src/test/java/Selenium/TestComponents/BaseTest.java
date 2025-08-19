@@ -60,11 +60,13 @@ public class BaseTest {
 		if(browserName.contains("chrome")) 
 		{
 			
-			ChromeOptions options = new ChromeOptions(); //for headless mode.
-			if(browserName.contains("headless"))
-			{
-				options.addArguments("headless");
-			}
+			ChromeOptions options = new ChromeOptions();
+if (browserName.contains("headless")) {
+    options.addArguments("--headless=new");   // new headless mode
+    options.addArguments("--disable-gpu");    // recommended for Jenkins
+    options.addArguments("--no-sandbox");     // required in some CI/CD
+    options.addArguments("--disable-dev-shm-usage"); // avoids memory issues
+
 //			headless mode means, chrome will not invoke in front for execution but in the backend execution is going on.
 			
 			WebDriverManager.chromedriver().setup();
