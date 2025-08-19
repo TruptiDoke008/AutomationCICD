@@ -23,7 +23,7 @@ only run "ErrorsHandling" this method-->
 
   <test thread-count="5" name="Main project Test">
     <classes>
-      <class name="Selenium.SeleniumAlltestngandPom.SimplePro2"/>
+      <class name="Selenium.SeleniumAlltestngandPom.SubmitOrder"/>
     </classes>
     </test>
   

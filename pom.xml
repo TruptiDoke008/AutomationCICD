@@ -67,7 +67,6 @@
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.11.0</version>
-    <scope>test</scope>
 </dependency>
 
 <!-- Required for WebDriverManager 5.x -->
