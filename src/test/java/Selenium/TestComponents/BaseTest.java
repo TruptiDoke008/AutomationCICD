@@ -117,15 +117,13 @@ public class BaseTest {
 	@BeforeMethod(alwaysRun=true)
 // (alwaysRun=true) means if there is particular group is being called/run via testng xml then it will help to call this 
 //	method to and does not restrict to from any other method.
-	public Landingpage Launchapp() throws IOException
-	{
-		driver = initializeDriver();
-	
-		landpg = new Landingpage(driver);
-//		passing the driver object into the Landingpage constructor.
-		landpg.goTo();
-//		Land on URL
-		return landpg;
+	public Landingpage Launchapp() throws IOException {
+	    System.out.println(">>> Inside Launchapp, initializing driver...");
+	    driver = initializeDriver();
+	    System.out.println(">>> Driver initialized: " + driver);
+	    landpg = new Landingpage(driver);
+	    landpg.goTo();
+	    return landpg;
 	}
 
 	@AfterMethod(alwaysRun=true)

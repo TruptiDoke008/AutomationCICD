@@ -70,11 +70,10 @@ public class SubmitOrder  extends BaseTest{
 		
 		@Test(dependsOnMethods={"SubmitOrder"})
 		//Depends on above method, When above method get executed then after that this method will be get executed.
-		public void OrderHistory()
-		{
-			Product_Catlog Producs = landpg.LoginApp("truptidoke008@gmail.com","Vikroli@123");
-			OrderPg order = Product_Catlog.goToOrderPg();
-			Assert.assertTrue(OrderPg.VerifyOrderdisplay(productname));
+		public void OrderHistory() {
+		    Product_Catlog Producs = landpg.LoginApp("truptidoke008@gmail.com","Vikroli@123");
+		    OrderPg order = Producs.goToOrderPg();
+		    Assert.assertTrue(order.VerifyOrderdisplay(productname));
 		}
 		
 		
